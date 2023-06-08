@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -14,14 +15,12 @@ public class SquareRoot {
 
         for(int i=0; i<T; i++){
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-            double a = Integer.parseInt(st.nextToken());
-            double b = Integer.parseInt(st.nextToken());
-            double c = Math.pow(a, b);
+            BigInteger a = new BigInteger(st.nextToken());
+            BigInteger b = new BigInteger(st.nextToken());
+            BigInteger c = a.pow(b.intValue());
 
-            int lastDigit = (int) (c % 10); // 일의 자리 수 추출
+            int lastDigit = c.mod (BigInteger.TEN).intValue(); // 일의 자리 수 추출
             resultList.add(lastDigit); // 일의 자리 수를 리스트에 추가
-
-
         }
 
         for(int result : resultList){
