@@ -1,0 +1,22 @@
+현재구조
+
+createCalendar 함수로 달력을 만든다.
+filter 는 이미 html 에 존재
+\
+createCalendar 를 만들때 "월" 정보가 필요
+filter 를 선택할때는 createCalendar 를 호출할 수가 없음 -> "월" 정보가 없기 때문에
+
+
+
+원래구조
+select("월"정보) 를 미리 만들어두면 filter 와 함께 calendar 를 동적으로 생성할 수 있음 
+
+
+중요 공부 목록
+
+알고리즘 자료구조
+
+네트워크 
+
+운영체제
+
